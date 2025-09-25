@@ -1,18 +1,29 @@
 #include <Arduino.h>
+#include "M5Atom.h"
 
-// put function declarations here:
-int myFunction(int, int);
+// const int BTN_1;
+// const int BTN_2;
+// const int BTN_A;
+// const int BTN_B;
+// const int BTN_C;
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+const int BTN_SET = 22;
+
+void setup()
+{
+    pinMode(BTN_SET, INPUT);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void press_ms(int gpio, int ms)
+{
+    pinMode(gpio, OUTPUT);
+    digitalWrite(gpio, HIGH);
+    delay(ms);
+    pinMode(gpio, INPUT);
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void loop()
+{
+    press_ms(BTN_SET, 100);
+    delay(1000);
 }
