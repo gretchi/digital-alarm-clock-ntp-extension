@@ -226,12 +226,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "power_pin_not_driven|508000|736600|e8ef8715-6114-4a05-aefd-b144fbd70eb0|00000000-0000-0000-0000-000000000000|/21a13737-199d-477a-a3ba-80eaf57ab224|/21a13737-199d-477a-a3ba-80eaf57ab224|",
-        "GPIO駆動のため"
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
