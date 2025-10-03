@@ -11,15 +11,18 @@ const int BTN_SET = 22;
 
 void setup()
 {
+    M5.begin(true, false, true);
     pinMode(BTN_SET, INPUT);
 }
 
 void press_ms(int gpio, int ms)
 {
     pinMode(gpio, OUTPUT);
+    M5.dis.drawpix(0, 0x0000FF);
     digitalWrite(gpio, HIGH);
     delay(ms);
     pinMode(gpio, INPUT);
+    M5.dis.drawpix(0, 0x000000);
 }
 
 void loop()
